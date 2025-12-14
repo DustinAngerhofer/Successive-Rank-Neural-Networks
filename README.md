@@ -9,4 +9,4 @@ What we have done here is effectively Low-Rank Adapdation (LoRA), but without a 
 
 Notice the step-like nature of the successive loss. The model quickly converges to the optimal rank-1 update, after which the loss plateaus. The small spike in loss immediately after each plateau is the result of injecting new learnable parameters at the new rank-1 update. The loss curve is otherwise very smooth compared to that of the regular neural network. Notice further how the regular neural network almost immediately overfits on the training data; of course, this can be avoided with regularization. 
 
-**Further avenues to explore***: Does training a model in this fashion avoid bad local minima and other pathological features of loss landscapes? Could significant time and resources be saved by pretraining low-rank models, utilizing higher ranks for fine-tuning only? 
+**Further avenues to explore**: Does training a model in this fashion avoid bad local minima and other pathological features of loss landscapes? Could significant time and resources be saved by pretraining low-rank models, utilizing higher ranks for fine-tuning only? 
