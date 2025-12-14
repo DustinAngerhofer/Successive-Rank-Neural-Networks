@@ -1,4 +1,4 @@
-# Successive-Rank-Neural-Networks
+# Successive-Rank-Neural-Networks:
 
 <img width="2000" height="1125" alt="580_SuccessiveNN-1" src="https://github.com/user-attachments/assets/cb061689-52b9-4490-907d-2e61581d3566" />
 
@@ -6,4 +6,7 @@ What we have done here is effectively Low-Rank Adapdation (LoRA), but without a 
 
 
 <img width="640" height="480" alt="successive_vs_nn_normed_2" src="https://github.com/user-attachments/assets/803ea032-b4a2-4493-ad24-0894452a66ee" />
-Notice the step-like nature of the successive loss. The model quickly converges to the optimal rank-1 update, after which the loss plateaus. The small spike in loss immediately after each plateau is the result of injecting new learnable parameters at the new rank-1 update. Notice further how the regular neural network overfits on the training data.
+
+Notice the step-like nature of the successive loss. The model quickly converges to the optimal rank-1 update, after which the loss plateaus. The small spike in loss immediately after each plateau is the result of injecting new learnable parameters at the new rank-1 update. The loss curve is otherwise very smooth compared to that of the regular neural network. Notice further how the regular neural network almost immediately overfits on the training data; of course, this can be avoided with regularization. 
+
+**Further avenues to explore***: Does training a model in this fashion avoid bad local minima and other pathological features of loss landscapes? Could significant time and resources be saved by pretraining low-rank models, utilizing higher ranks for fine-tuning only? 
